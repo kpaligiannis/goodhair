@@ -1,0 +1,471 @@
+@font-face {
+    font-family: 'Apercu Mono Pro';
+    src: url('assets/fonts/apercu_mono_pro.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plakat Grotesk Bold';
+    src: url('assets/fonts/plakat_grotesk_bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Apercu Mono Pro', monospace;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: 'Apercu Mono Pro', monospace;
+}
+
+h1 {
+    font-family: 'Plakat Grotesk Bold', monospace;
+    font-weight: 800;
+}
+.menu-modal {
+    font-family: 'Plakat Grotesk Bold', monospace;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.menu-content a {
+    all: unset;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: clamp(1rem, 12vw, 4rem);
+    margin: 20px;
+    text-align: center;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.accordion-container {
+    padding: 20px 28px;
+}
+
+.accordion {
+    font-family: 'Plakat Grotesk Bold', monospace;
+    @media (min-width: 844px) {
+        font-size: 14vh;
+    }
+    @media (max-width: 844px) {
+        font-size: 10vh;
+    }
+    background-color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-bottom: 1px solid black;
+}
+
+.nav {
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0;
+    background-color: #fff;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.tagline {
+    font-family: 'Plakat Grotesk Bold', monospace;
+    font-size: 6vw;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @media (min-width: 844px) {
+        min-height: 700px;
+    }
+    @media (max-width: 844px) {
+        min-height:250px;
+    }
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero .hero-img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.content {
+    padding: 10px 10px;
+}
+
+.content p {
+    align-content: center;
+    font-size: 16px;
+}
+
+.identity {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.action-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.action-btn {
+    border: 2px solid black;
+    padding: 25px 50px;
+    font-size: 24px;
+    background-color: white;
+}
+
+.section-img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top:100px;
+}
+
+.section-img img {
+    width: 100%;
+    padding:10px;
+}
+
+.panel {
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.pricing {
+    display: flex;
+    height:70px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    @media (min-width: 844px) {
+        padding: 20px 20px;
+    }
+    font-size: 14px;
+    width: 100%;
+    margin-top:100px;
+}
+
+.footer-container {
+    @media (min-width: 844px) {
+        display: flex;
+        justify-content: space-between;
+    }
+    text-align: left;
+    margin: 0 auto;
+    padding: 35px;
+}
+
+.footer-column a {
+    cursor: pointer;
+    font-family: 'Apercu Mono Pro', monospace;
+    all: unset;
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: left;
+    padding: 0 35px 0;
+    font-size: 12px;
+}
+
+.person-image {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+}
+
+.desktop {
+    @media (max-width: 844px) {
+        height:0;
+        opacity:0;
+    }
+}
+
+.mobile {
+    @media (min-width: 844px) {
+        height:0;
+        opacity:0;
+    }
+}
+
+@media (min-width: 844px) {
+    .gallery {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 25% 24% 24% 24%;
+        gap: 10px;
+        padding: 5px 5px;
+    }
+
+    .info {
+        width: 100%;
+        min-height: 600px;
+        display: inline-flex;
+    }
+
+    .info img {
+        width: 49%;
+        height: 49%;
+        padding: 10px 10px;
+    }
+
+    .info h1 {
+        font-size: 3vw;
+    }
+
+    .description {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .contact-form {
+        max-width:90%;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .contact-form label {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .contact-form input[name="name"],
+    .contact-form input[name="email"],
+    .contact-form input[name="phone"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        outline: none;
+        border:none;
+        border-bottom: 1px solid black;
+        resize: none;
+    }
+
+    .contact-form button {
+        padding: 20px 50px 20px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .contact-form button:hover {
+        background-color: #333;
+    }
+
+    .custom-checkbox {
+        position: relative;
+        display: flex; /* Changed from inline-block to flex */
+        align-items: center; /* Vertically center aligns the text and checkbox */
+        cursor: pointer;
+        width: auto; /* Allow width to adjust based on content */
+        height: 20px; /* Keep your fixed height */
+        margin-bottom: 20px;
+    }
+
+    .custom-checkbox input[type="checkbox"] {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .custom-checkbox .checkmark {
+        position: relative; /* Adjusted to position relative to the flex container */
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        display: flex; /* Aligns the pseudo-elements inside this container */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+    }
+
+    .custom-checkbox .checkmark::before,
+    .custom-checkbox .checkmark::after {
+        content: '';
+        position: absolute;
+        width: 0.5px;
+        height: 60%; /* Adjusted relative size to the checkbox */
+        background-color: black;
+        display: none; /* Hidden by default */
+    }
+
+    .custom-checkbox .checkmark::before {
+        transform: rotate(45deg) scale(2.3);
+    }
+
+    .custom-checkbox .checkmark::after {
+        transform: rotate(-45deg) scale(2.3);
+    }
+
+    .custom-checkbox input[type="checkbox"]:checked + .checkmark::before,
+    .custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+        display: block;
+    }
+
+    .form-hack {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .form-hack label {
+        width: 20%;
+    }
+    .form-hack p {
+        white-space: nowrap;
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    .submit-wrapper {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    #get-in-touch {
+        width:100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        text-align: left;
+        padding: 10px;
+    }
+
+    #get-in-touch div {
+        width: 50%;
+    }
+
+    #get-in-touch h1 {
+        text-align: left;
+        font-size: 5vw;
+    }
+
+    .reduced {
+        line-height: 0.8;
+    }
+
+    .align-end {
+        align-self: flex-end;
+    }
+
+
+    .white-letters {
+        align-items: flex-start !important;
+        padding: 0 30px 0;
+        height: auto;
+        background-color: black;
+    }
+
+    .white-letters a {
+        font-family: 'Apercu Mono Pro', monospace;
+        text-decoration: none;
+        color: white;
+        padding-top: 30px;
+    }
+
+    .white-letters .logo {
+        color: white;
+    }
+}
+
+
+
+
