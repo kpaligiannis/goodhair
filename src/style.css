@@ -30,6 +30,7 @@ h1 {
     font-weight: 800;
 }
 .menu-modal {
+    overflow: hidden;
     font-family: 'Plakat Grotesk Bold', monospace;
     font-weight: bold;
     position: fixed;
@@ -47,6 +48,7 @@ h1 {
 }
 
 .menu-content {
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,8 +61,8 @@ h1 {
     display: block;
     cursor: pointer;
     color: white;
-    font-size: clamp(1rem, 12vw, 4rem);
-    margin: 20px;
+    font-size: clamp(1rem, 12vw, 16rem);
+    margin:-25px;
     text-align: center;
 }
 
@@ -93,7 +95,7 @@ h1 {
 }
 
 .nav {
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,7 +132,6 @@ h1 {
 }
 
 .hero {
-    position: relative;
     text-align: center;
     color: white;
 }
@@ -138,7 +139,10 @@ h1 {
 .hero .hero-img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%);
+}
+
+main {
+    margin-top:80px;
 }
 
 .content {
@@ -248,16 +252,25 @@ footer {
 
 .desktop {
     @media (max-width: 844px) {
-        height:0;
+        height:0 !important;
+        width: 0 !important;
         opacity:0;
     }
 }
 
 .mobile {
     @media (min-width: 844px) {
-        height:0;
+        height:0 !important;
+        width: 0 !important;
         opacity:0;
     }
+}
+
+.sticky {
+    box-sizing: border-box;
+    position: fixed;
+    width:100%;
+    top:0;
 }
 
 @media (min-width: 844px) {
