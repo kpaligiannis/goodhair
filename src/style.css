@@ -177,7 +177,6 @@ main {
 .action-btn {
     border: 2px solid black;
     padding: 25px 50px;
-    font-size: 24px;
     background-color: white;
 }
 
@@ -241,7 +240,6 @@ footer {
 .footer-bottom {
     text-align: left;
     padding: 0 35px 0;
-    font-size: 12px;
 }
 
 .person-image {
