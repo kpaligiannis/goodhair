@@ -48,6 +48,10 @@ h1 {
     transition: opacity 0.5s;
 }
 
+.main-content {
+    padding: 0 30px;
+}
+
 .menu-content {
     padding-top: 20px;
     display: flex;
@@ -116,10 +120,10 @@ h1 {
 
 .tagline {
     font-family: 'Plakat Grotesk Bold', monospace;
-    font-size: 6vw;
     font-weight: bold;
     color: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -130,6 +134,12 @@ h1 {
         min-height:250px;
     }
     width: 100%;
+}
+
+.tagline p {
+    font-size: 5em;
+    line-height:72px;
+    margin: 0;
 }
 
 .hero {
@@ -147,7 +157,7 @@ main {
 }
 
 .content {
-    padding: 10px 10px;
+    padding: 10px 0;
 }
 
 .content p {
@@ -172,13 +182,15 @@ main {
     align-content: center;
     justify-content: center;
     padding: 10px;
+    margin-top:40px;
 }
 
 .action-btn {
     border: 2px solid black;
-    padding: 25px 50px;
+    padding: 25px 40px;
     background-color: white;
     font-size: 14px;
+    width:170px;
 }
 
 .section-img {
@@ -191,7 +203,8 @@ main {
 
 .section-img img {
     width: 100%;
-    padding:10px;
+    display: block;
+    margin: 0 auto;
 }
 
 .panel {
@@ -212,9 +225,6 @@ main {
 footer {
     background-color: #000;
     color: #fff;
-    @media (min-width: 844px) {
-        padding: 20px 20px;
-    }
     font-size: 14px;
     width: 100%;
     margin-top:100px;
@@ -236,6 +246,10 @@ footer {
     all: unset;
     display: block;
     margin: 5px 0;
+}
+
+.footer-column p {
+    margin:4px;
 }
 
 .footer-bottom {
@@ -278,23 +292,26 @@ footer {
         justify-content: center;
         grid-template-columns: 25% 24% 24% 24%;
         gap: 10px;
-        padding: 5px 5px;
     }
 
     .info {
         width: 100%;
-        min-height: 600px;
         display: inline-flex;
     }
 
     .info img {
-        width: 49%;
-        height: 49%;
-        padding: 10px 10px;
+        width: 50%;
+        margin-top:-3px;
+        height: 50%;
     }
 
     .info h1 {
-        font-size: 3vw;
+        font-size: 3em;
+    }
+
+    .tagline h1 {
+        font-size: 10em;
+        margin:0;
     }
 
     .description {
