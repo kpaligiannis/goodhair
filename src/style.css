@@ -86,7 +86,7 @@ h1 {
         font-size: 12em;
     }
     @media (max-width: 844px) {
-        font-size: 10em;
+        font-size: 5em;
     }
     background-color: white;
     cursor: pointer;
