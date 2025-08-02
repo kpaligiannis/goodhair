@@ -15,26 +15,31 @@
     <meta property="og:url" content="https://www.goodhairgroup.de/">
     <meta property="og:site_name" content="GOOD HAIR GROUP">
     <style>
-        @media (min-width: 844px) {
-             #maintenance {
-                font-size: 11em;
-                line-height: 118px; /* Consider using 'em' or a percentage for line-height too for better responsiveness */
-            }
+        .sticky a{
+            font-size:clamp(12px,1.04vw,20px);
+        }
+        .logo{
+            font-size:clamp(20px,2.08vw, 40px);
+        }
+        #maintenance {
+            font-size: clamp(64px,10.42vw,200px);
+            line-height: clamp(59px, 8.15vw, 154px);
+        }
+        main {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            align-content: center;
+            overflow: hidden;
         }
 
-        @media (max-width: 843.98px) { /* Use max-width or adjust break point to avoid overlap issues if 844px is inclusive in both */
-            #maintenance  {
-                margin-top: 50px;
-                font-size: 5em;
-                line-height: 59px; /* Consider using 'em' or a percentage for line-height too */
-            }
-        }
+
     </style>
 </head>
 <body>
 <header>
     <div class="nav sticky">
-        <a href="https://salonkee.de/salon-group/good-hair-group" target="_blank">Booking</a>
+        <a href="https://salonkee.de/salon-group/good-hair-group" target="_blank" id="booking">Booking</a>
         <a href="/"><h1 class="logo">GOODHAIRGROUP</h1></a>
         <a href="https://www.instagram.com/goodhairgroup/" target="_blank" id="instagram">Instagram</a>
     </div>
