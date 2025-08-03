@@ -11,18 +11,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        new HtmlWebpackPlugin({
-            template: './src/people.html',
-            filename: 'people.html',
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/services.html',
-            filename: 'services.html',
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/products.html',
-            filename: 'products.html',
-        })
+        // new HtmlWebpackPlugin({
+        //     template: './src/people.html',
+        //     filename: 'people.html',
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/services.html',
+        //     filename: 'services.html',
+        // }),
+        // new HtmlWebpackPlugin({
+        //     template: './src/products.html',
+        //     filename: 'products.html',
+        // })
     ],
     module: {
         rules: [
