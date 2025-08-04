@@ -18,8 +18,12 @@
     <meta property="og:site_name" content="GOOD HAIR GROUP">
     <noscript><style>body { visibility: visible; }</style></noscript>
     <style>
-        .sticky a{
-            font-size:clamp(12px,0.9vw,20px);
+        .sticky a {
+            font-size:clamp(12px,0.8vw,20px);
+        }
+        .sticky a:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
         }
         #booking, #instagram {
             width:67px;
@@ -50,8 +54,14 @@
             main {
                 margin-top:80px;
             }
-            #maintenance {
-                margin-top: -80px;
+            #booking, #instagram {
+                width:70px;
+            }
+        }
+
+        @media (min-width: 1201px) {
+            #booking, #instagram {
+                width:90px;
             }
         }
 
