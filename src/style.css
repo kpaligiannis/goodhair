@@ -35,6 +35,10 @@ h1 {
 
 a { outline: none; }
 
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .menu-modal {
     overflow: hidden;
     font-family: 'Plakat Grotesk Bold', monospace;
