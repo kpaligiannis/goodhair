@@ -32,6 +32,9 @@ h1 {
     font-family: 'Plakat Grotesk Bold', monospace;
     font-weight: 800;
 }
+
+a { outline: none; }
+
 .menu-modal {
     overflow: hidden;
     font-family: 'Plakat Grotesk Bold', monospace;
