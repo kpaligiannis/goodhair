@@ -28,6 +28,9 @@
             margin-left:5px;
             font-size:clamp(20px,2.08vw, 40px);
         }
+        html, body {
+            overflow-x:hidden;
+        }
         #maintenance {
             margin-top:-30px;
             font-size: clamp(64px,10.42vw,200px);
@@ -44,6 +47,16 @@
         ::-webkit-scrollbar {
             display: none; /* Chrome, Safari, and Opera */
         }
+
+        @media (min-width: 844px) {
+            main {
+                margin-top:80px;
+            }
+            #maintenance {
+                margin-top: -80px;
+            }
+        }
+
 
 
     </style>
